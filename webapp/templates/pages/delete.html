@@ -1,0 +1,19 @@
+{% extends 'pages/index.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>Customer List</h2>
+    <ul>
+        {% for customer in customers %}
+            <li>
+                {{ customer.name }} - {{ customer.email }} - {{ customer.phone_number }}
+                <form method="post" action="{% url 'delete_customer' %}">
+                    {% csrf_token %}
+                    <input type="hidden" name="customer_id" value="{{ customer.id }}">
+                    <button type="submit">Delete</button>
+                </form>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

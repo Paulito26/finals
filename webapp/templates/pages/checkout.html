@@ -1,0 +1,16 @@
+{% extends 'pages/index.html' %}
+{% load static %}
+
+{% block content %}
+  <h2>Place an Order</h2>
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.customer }}
+    {{ form.product_name }}
+    {{ form.Promo_name }}
+    {{ form.phone }}
+    {{ form.quantity }}
+    {{ form.address }}
+    <button type="submit">Place Order</button>
+  </form>
+{% endblock %}

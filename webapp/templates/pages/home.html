@@ -1,0 +1,33 @@
+{% extends 'pages/index.html' %}
+{% load static %}
+
+{% block content %}
+ <div class="container" style="background-image: url(''); background-size: cover; color: black;">
+
+    <header class="text-center my-5">
+        <h1>Welcome to Usok ni Aaron: VAPESHOP</h1>
+        <p>Explore a wide range of vaping products!</p>
+        
+        
+        <a href="/register" class="btn btn-primary btn-lg mt-3">Order Now</a>
+    </header>
+
+    <section id="home" class="text-center my-5">
+        <h2>Featured Products</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Flava 7000puffs</h3>
+                <img src="{% static 'images/p1.jpg' %}" alt="Product 1" class="img-fluid">
+                <p>On Sale 20% off</p>
+            </div>
+            <div class="col-md-6">
+                <h3>Puff bar</h3>
+                <img src="{% static 'images/p2.jpg' %}" alt="Product 2" class="img-fluid">
+                <p>Buy 1 take 1 Until end of year</p>
+            </div>
+        </div>
+    </section>
+
+    
+  
+{% endblock %}
